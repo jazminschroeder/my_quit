@@ -1,0 +1,84 @@
+$orange: #FFC200;
+body{
+  font-family: $blueprint-font-family; 
+  font-size:1em;
+@include background-image(linear-gradient(white, #cccccc 30%, #bbbbbb 70%, #aaaaaa));	
+  height:100%; 
+}
+.two-col {
+  @include container;
+  @include border-top-radius(25px);
+  @include single-box-shadow; 
+  margin-top:10px;  
+  background-color:white; 
+  #header, #footer, #division {
+    @include column($blueprint-grid-columns);
+  }
+  #header{
+    height:80px;
+    padding-left:50px;
+    margin-top:1em;
+    h1{
+      $title-columns: floor( 3 * $blueprint-grid-columns / 4);
+      @include column($title-columns);
+      font-weight:bold;
+      color:#84002E;
+      font-size:50px;
+      margin-top:10px; 
+      text-shadow: 2px 2px gray;
+    }
+  }
+  #division{
+    border-top:10px solid black;
+    background-color: white;
+    height:2px;
+    border-bottom: 5px solid black;  
+  }
+  #sidebar {
+    @include column(7);  
+    #sidebar-menu{  
+      @include column(5, true);
+      @include push(1); 
+      @include border-radius(5px);
+      border: 1px solid #CCCCCC; 
+      background-color:#FAFAFB;  
+      margin-top:30px;
+      h1{
+        color:#006295;
+        text-align:center;
+        height:20px;
+        font-size:1.8em;
+        font-weight:bold;
+        margin-top:5px;
+      } 
+      ul {
+        padding-left:5px;
+        list-style-type:none;
+        li {
+          margin-top:10px;
+          font-size:1.5em;
+          span{
+            display:block; 
+            font-size:0.7em;
+            color:gray;
+            
+          }
+        }  
+      }
+    }
+  }
+  #content {
+    @include column(17, true);  
+    margin-top:30px;
+    min-height:600px;
+  } 
+  #footer{
+    @include column($blueprint-grid-columns);  
+    text-align:center;
+    background: black;
+    color:$orange;
+    font-size:0.7em;
+    padding:5px;
+  }
+}
+
