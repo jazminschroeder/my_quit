@@ -2,7 +2,7 @@ $orange: #FFC200;
 body{
   font-family: $blueprint-font-family; 
   font-size:1em;
-@include background-image(linear-gradient(white, #cccccc 30%, #bbbbbb 70%, #aaaaaa));	
+  @include background-image(linear-gradient(white, #cccccc 30%, #bbbbbb 70%, #aaaaaa));	
   height:100%; 
 }
 .two-col {
@@ -15,17 +15,22 @@ body{
     @include column($blueprint-grid-columns);
   }
   #header{
-    height:80px;
+    height:100px;
     padding-left:50px;
-    margin-top:1em;
-    h1{
-      $title-columns: floor( 3 * $blueprint-grid-columns / 4);
-      @include column($title-columns);
+    logo{
+      @include column(20);
       font-weight:bold;
-      color:#84002E;
-      font-size:50px;
-      margin-top:10px; 
+      font-size:5em;
+      height:130px;
+      vertical-align:bottom;
       text-shadow: 2px 2px gray;
+      background-image:url('../images/clock150.jpg');
+      background-repeat: no-repeat;
+      background-position: 60px 0px;
+      a{text-decoration: none; 
+        color:black;
+
+      }
     }
   }
   #division{
@@ -49,7 +54,7 @@ body{
         height:20px;
         font-size:1.8em;
         font-weight:bold;
-        margin-top:5px;
+        margin-top:15px;
       } 
       ul {
         padding-left:5px;
@@ -71,14 +76,32 @@ body{
     @include column(17, true);  
     margin-top:30px;
     min-height:600px;
+    #register, #sign-in {
+      @include border-right-radius(15px);
+      @include single-box-shadow; 
+      height:300px;
+      padding:10px;
+      font-size:1.8em;
+      text-align:center;
+    }    
+    #register{
+      @include column(8);
+      @include background-image(linear-gradient(right, #00467F, #009DDC));	
+      color:white;
+    }
+    #sign-in{
+      @include column(6);
+      @include background-image(linear-gradient(left, #8DD62E, #9EEF14));	
+    }
+
   } 
   #footer{
     @include column($blueprint-grid-columns);  
     text-align:center;
     background: black;
-    color:$orange;
-    font-size:0.7em;
-    padding:5px;
+    color:#9EEF14;
+    font-size:0.9em;
+    padding:10px;
   }
 }
 

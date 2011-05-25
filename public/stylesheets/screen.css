@@ -107,34 +107,41 @@ body {
 }
 /* line 17, ../../app/stylesheets/partials/_global.scss */
 .two-col #header {
-  height: 80px;
+  height: 100px;
   padding-left: 50px;
-  margin-top: 1em;
 }
-/* line 21, ../../app/stylesheets/partials/_global.scss */
-.two-col #header h1 {
+/* line 20, ../../app/stylesheets/partials/_global.scss */
+.two-col #header logo {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 710px;
+  width: 790px;
   font-weight: bold;
-  color: #84002E;
-  font-size: 50px;
-  margin-top: 10px;
+  font-size: 5em;
+  height: 130px;
+  vertical-align: bottom;
   text-shadow: 2px 2px gray;
+  background-image: url("../images/clock150.jpg");
+  background-repeat: no-repeat;
+  background-position: 60px 0px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136@rails307/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .two-col #header h1 {
+* html .two-col #header logo {
   overflow-x: hidden;
 }
-/* line 31, ../../app/stylesheets/partials/_global.scss */
+/* line 30, ../../app/stylesheets/partials/_global.scss */
+.two-col #header logo a {
+  text-decoration: none;
+  color: black;
+}
+/* line 36, ../../app/stylesheets/partials/_global.scss */
 .two-col #division {
   border-top: 10px solid black;
   background-color: white;
   height: 2px;
   border-bottom: 5px solid black;
 }
-/* line 37, ../../app/stylesheets/partials/_global.scss */
+/* line 42, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar {
   display: inline;
   float: left;
@@ -145,7 +152,7 @@ body {
 * html .two-col #sidebar {
   overflow-x: hidden;
 }
-/* line 39, ../../app/stylesheets/partials/_global.scss */
+/* line 44, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu {
   display: inline;
   float: left;
@@ -169,32 +176,32 @@ body {
 * html .two-col #sidebar #sidebar-menu {
   overflow-x: hidden;
 }
-/* line 46, ../../app/stylesheets/partials/_global.scss */
+/* line 51, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu h1 {
   color: #006295;
   text-align: center;
   height: 20px;
   font-size: 1.8em;
   font-weight: bold;
-  margin-top: 5px;
+  margin-top: 15px;
 }
-/* line 54, ../../app/stylesheets/partials/_global.scss */
+/* line 59, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu ul {
   padding-left: 5px;
   list-style-type: none;
 }
-/* line 57, ../../app/stylesheets/partials/_global.scss */
+/* line 62, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu ul li {
   margin-top: 10px;
   font-size: 1.5em;
 }
-/* line 60, ../../app/stylesheets/partials/_global.scss */
+/* line 65, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu ul li span {
   display: block;
   font-size: 0.7em;
   color: gray;
 }
-/* line 70, ../../app/stylesheets/partials/_global.scss */
+/* line 75, ../../app/stylesheets/partials/_global.scss */
 .two-col #content {
   display: inline;
   float: left;
@@ -207,7 +214,63 @@ body {
 * html .two-col #content {
   overflow-x: hidden;
 }
-/* line 75, ../../app/stylesheets/partials/_global.scss */
+/* line 79, ../../app/stylesheets/partials/_global.scss */
+.two-col #content #register, .two-col #content #sign-in {
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -o-border-top-right-radius: 15px;
+  -ms-border-top-right-radius: 15px;
+  -khtml-border-top-right-radius: 15px;
+  border-top-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -o-border-bottom-right-radius: 15px;
+  -ms-border-bottom-right-radius: 15px;
+  -khtml-border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -o-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  height: 300px;
+  padding: 10px;
+  font-size: 1.8em;
+  text-align: center;
+}
+/* line 87, ../../app/stylesheets/partials/_global.scss */
+.two-col #content #register {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #00467f), color-stop(100%, #009ddc));
+  background-image: -webkit-linear-gradient(right, #00467f, #009ddc);
+  background-image: -moz-linear-gradient(right, #00467f, #009ddc);
+  background-image: -o-linear-gradient(right, #00467f, #009ddc);
+  background-image: linear-gradient(right, #00467f, #009ddc);
+  color: white;
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136@rails307/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .two-col #content #register {
+  overflow-x: hidden;
+}
+/* line 92, ../../app/stylesheets/partials/_global.scss */
+.two-col #content #sign-in {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #8dd62e), color-stop(100%, #9eef14));
+  background-image: -webkit-linear-gradient(left, #8dd62e, #9eef14);
+  background-image: -moz-linear-gradient(left, #8dd62e, #9eef14);
+  background-image: -o-linear-gradient(left, #8dd62e, #9eef14);
+  background-image: linear-gradient(left, #8dd62e, #9eef14);
+}
+/* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136@rails307/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .two-col #content #sign-in {
+  overflow-x: hidden;
+}
+/* line 98, ../../app/stylesheets/partials/_global.scss */
 .two-col #footer {
   display: inline;
   float: left;
@@ -215,9 +278,9 @@ body {
   width: 950px;
   text-align: center;
   background: black;
-  color: #ffc200;
-  font-size: 0.7em;
-  padding: 5px;
+  color: #9EEF14;
+  font-size: 0.9em;
+  padding: 10px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136@rails307/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .two-col #footer {
