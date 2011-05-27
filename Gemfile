@@ -11,6 +11,9 @@ gem "compass", ">= 0.11.1"
 #javascript
 gem 'jquery-rails'
 
+#authentication
+gem 'devise'
+
 group :development, :test do
   gem 'rspec-rails'
 end

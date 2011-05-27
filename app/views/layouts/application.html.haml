@@ -11,7 +11,6 @@
   .two-col
     #header
       %logo #{link_to ("My&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uit").html_safe, '/' }
-     
     #division
     #sidebar
       #sidebar-menu
@@ -27,6 +26,10 @@
             %a(href="http://comittedquitters.com") CommitedQuitters.com
             %span Individualized stop smoking program.
     #content
+      -if notice.present?       
+        %p.notice= notice 
+      -if alert.present?
+        %p.alert= alert 
       =yield  
     #footer
       My Quit @2011 - Jazmin Schroeder
