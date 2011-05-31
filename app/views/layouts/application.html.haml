@@ -10,7 +10,10 @@
     =javascript_include_tag :defaults
   .two-col
     #header
-      %logo #{link_to ("My&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uit").html_safe, '/' }
+      #logo #{link_to ("My&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uit").html_safe, '/' }
+      -if current_user      
+        #sign-in 
+          Welcome back #{current_user.email} | #{link_to 'Sign out', destroy_user_session_path}
     #division
     #sidebar
       #sidebar-menu

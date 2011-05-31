@@ -17,8 +17,8 @@ body{
   #header{
     height:100px;
     padding-left:50px;
-    logo{
-      @include column(20);
+    #logo{
+      @include column(12);
       font-weight:bold;
       font-size:5em;
       height:130px;
@@ -29,8 +29,11 @@ body{
       background-position: 60px 0px;
       a{text-decoration: none; 
         color:black;
-
       }
+    }
+    #sign-in{
+      margin-top:70px;
+      margin-right:20px;   
     }
   }
   #division{

@@ -111,11 +111,11 @@ body {
   padding-left: 50px;
 }
 /* line 20, ../../app/stylesheets/partials/_global.scss */
-.two-col #header logo {
+.two-col #header #logo {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 790px;
+  width: 470px;
   font-weight: bold;
   font-size: 5em;
   height: 130px;
@@ -126,22 +126,27 @@ body {
   background-position: 60px 0px;
 }
 /* line 147, ../../../../.rvm/gems/ruby-1.9.2-p136@rails307/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .two-col #header logo {
+* html .two-col #header #logo {
   overflow-x: hidden;
 }
 /* line 30, ../../app/stylesheets/partials/_global.scss */
-.two-col #header logo a {
+.two-col #header #logo a {
   text-decoration: none;
   color: black;
 }
-/* line 36, ../../app/stylesheets/partials/_global.scss */
+/* line 34, ../../app/stylesheets/partials/_global.scss */
+.two-col #header #sign-in {
+  margin-top: 70px;
+  margin-right: 20px;
+}
+/* line 39, ../../app/stylesheets/partials/_global.scss */
 .two-col #division {
   border-top: 10px solid black;
   background-color: white;
   height: 2px;
   border-bottom: 5px solid black;
 }
-/* line 42, ../../app/stylesheets/partials/_global.scss */
+/* line 45, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar {
   display: inline;
   float: left;
@@ -152,7 +157,7 @@ body {
 * html .two-col #sidebar {
   overflow-x: hidden;
 }
-/* line 44, ../../app/stylesheets/partials/_global.scss */
+/* line 47, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu {
   display: inline;
   float: left;
@@ -176,7 +181,7 @@ body {
 * html .two-col #sidebar #sidebar-menu {
   overflow-x: hidden;
 }
-/* line 51, ../../app/stylesheets/partials/_global.scss */
+/* line 54, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu h1 {
   color: #006295;
   text-align: center;
@@ -185,23 +190,23 @@ body {
   font-weight: bold;
   margin-top: 15px;
 }
-/* line 59, ../../app/stylesheets/partials/_global.scss */
+/* line 62, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu ul {
   padding-left: 5px;
   list-style-type: none;
 }
-/* line 62, ../../app/stylesheets/partials/_global.scss */
+/* line 65, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu ul li {
   margin-top: 10px;
   font-size: 1.5em;
 }
-/* line 65, ../../app/stylesheets/partials/_global.scss */
+/* line 68, ../../app/stylesheets/partials/_global.scss */
 .two-col #sidebar #sidebar-menu ul li span {
   display: block;
   font-size: 0.7em;
   color: gray;
 }
-/* line 75, ../../app/stylesheets/partials/_global.scss */
+/* line 78, ../../app/stylesheets/partials/_global.scss */
 .two-col #content {
   display: inline;
   float: left;
@@ -214,7 +219,7 @@ body {
 * html .two-col #content {
   overflow-x: hidden;
 }
-/* line 79, ../../app/stylesheets/partials/_global.scss */
+/* line 82, ../../app/stylesheets/partials/_global.scss */
 .two-col #content #register, .two-col #content #sign-in {
   -moz-border-radius-topright: 15px;
   -webkit-border-top-right-radius: 15px;
@@ -237,7 +242,7 @@ body {
   font-size: 1.8em;
   text-align: center;
 }
-/* line 87, ../../app/stylesheets/partials/_global.scss */
+/* line 90, ../../app/stylesheets/partials/_global.scss */
 .two-col #content #register {
   display: inline;
   float: left;
@@ -254,7 +259,7 @@ body {
 * html .two-col #content #register {
   overflow-x: hidden;
 }
-/* line 92, ../../app/stylesheets/partials/_global.scss */
+/* line 95, ../../app/stylesheets/partials/_global.scss */
 .two-col #content #sign-in {
   display: inline;
   float: left;
@@ -270,7 +275,7 @@ body {
 * html .two-col #content #sign-in {
   overflow-x: hidden;
 }
-/* line 98, ../../app/stylesheets/partials/_global.scss */
+/* line 101, ../../app/stylesheets/partials/_global.scss */
 .two-col #footer {
   display: inline;
   float: left;
