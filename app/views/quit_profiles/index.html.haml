@@ -1,0 +1,25 @@
+%h1 Listing quit_profiles
+
+%table
+  %tr
+    %th Cigarettes per day
+    %th Cigarettes per pack
+    %th Cost per pack
+    %th Quit date
+    %th
+    %th
+    %th
+
+  - @quit_profiles.each do |quit_profile|
+    %tr
+      %td= quit_profile.cigarettes_per_day
+      %td= quit_profile.cigarettes_per_pack
+      %td= quit_profile.cost_per_pack
+      %td= quit_profile.quit_date
+      %td= link_to 'Show', quit_profile
+      %td= link_to 'Edit', edit_quit_profile_path(quit_profile)
+      %td= link_to 'Destroy', quit_profile, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Quit profile', new_quit_profile_path

@@ -1,4 +1,6 @@
 MyQuit::Application.routes.draw do
+  resources :quit_profiles
+
   devise_for :users
 
   get "welcome/index"

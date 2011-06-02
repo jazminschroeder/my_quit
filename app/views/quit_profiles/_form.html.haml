@@ -1,0 +1,22 @@
+= form_for @quit_profile do |f|
+  -if @quit_profile.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@quit_profile.errors.count, "error")} prohibited this quit_profile from being saved:"
+      %ul
+        - @quit_profile.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :cigarettes_per_day
+    = f.text_field :cigarettes_per_day
+  .field
+    = f.label :cigarettes_per_pack
+    = f.text_field :cigarettes_per_pack
+  .field
+    = f.label :cost_per_pack
+    = f.text_field :cost_per_pack
+  .field
+    = f.label :quit_date
+    = f.datetime_select :quit_date
+  .actions
+    = f.submit 'Save'

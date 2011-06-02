@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Cigarettes per day:
+  = @quit_profile.cigarettes_per_day
+%p
+  %b Cigarettes per pack:
+  = @quit_profile.cigarettes_per_pack
+%p
+  %b Cost per pack:
+  #{number_to_currency(@quit_profile.cost_per_pack)} USD
+%p
+  %b Quit date:
+  = @quit_profile.quit_date
+
+= link_to 'Edit', edit_quit_profile_path(@quit_profile)
+\|
+= link_to 'Back', quit_profiles_path

@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110527024836) do
+ActiveRecord::Schema.define(:version => 20110601032517) do
+
+  create_table "quit_profiles", :force => true do |t|
+    t.decimal  "cigarettes_per_day",  :precision => 4, :scale => 1
+    t.integer  "cigarettes_per_pack"
+    t.decimal  "cost_per_pack",       :precision => 4, :scale => 2
+    t.datetime "quit_date",                                         :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id",                                           :null => false
+  end
+
+  add_index "quit_profiles", ["user_id"], :name => "index_quit_profiles_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false

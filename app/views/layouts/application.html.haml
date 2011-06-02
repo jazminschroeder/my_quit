@@ -11,7 +11,7 @@
   .two-col
     #header
       #logo #{link_to ("My&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uit").html_safe, '/' }
-      -if current_user      
+      -if user_signed_in?
         #sign-in 
           Welcome back #{current_user.email} | #{link_to 'Sign out', destroy_user_session_path}
     #division
