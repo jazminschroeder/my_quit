@@ -1,3 +1,4 @@
+%h1 #{@user.username}'s quit
 %p#notice= notice
 
 %p
@@ -13,6 +14,4 @@
   %b Quit date:
   = @quit_profile.quit_date
 
-= link_to 'Edit', edit_quit_profile_path(@quit_profile)
-\|
-= link_to 'Back', quit_profiles_path
+

@@ -1,8 +1,9 @@
 class QuitProfilesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => :show
   
   def show
-    @quit_profile = QuitProfile.find(params[:id])
+    @user = User.find_by_username(params[:username])    
+    @quit_profile = @user.quit_profile
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @quit_profile }
