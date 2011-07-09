@@ -4,18 +4,20 @@
 %p
   %b 
     = distance_of_time_in_words(@quit_profile.quit_date.to_time, Time.now, false)
+%p
+  %b
+    In other words... 
 
-%p
-  %b Cigarettes per day:
-  = @quit_profile.cigarettes_per_day
-%p
-  %b Cigarettes per pack:
-  = @quit_profile.cigarettes_per_pack
-%p
-  %b Cost per pack:
-  #{number_to_currency(@quit_profile.cost_per_pack)} USD
-%p
-  %b Quit date:
-  = @quit_profile.quit_date.to_date
+%ul
+  %li
+    = "#{number_to_currency(@quit_profile.money_saved)} USD saved" 
+  %li
+    = "#{distance_of_time_in_words(@quit_profile.current_time_plus_life_saved, Time.now, false)} of life saved" 
+  %li
+    = "Cigarettes not smoked: #{@quit_profile.cigarettes_not_smoked}"
+
+
+
+
 
 

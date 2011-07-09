@@ -80,7 +80,6 @@ body{
     margin-top:30px;
     min-height:600px;
     #register, #sign-in {
-      @include border-right-radius(15px);
       @include single-box-shadow; 
       height:300px;
       padding:10px;
@@ -89,11 +88,13 @@ body{
     }    
     #register{
       @include column(8);
+      @include border-left-radius(15px);
       @include background-image(linear-gradient(right, #00467F, #009DDC));	
       color:white;
     }
     #sign-in{
       @include column(6);
+      @include border-right-radius(15px);
       @include background-image(linear-gradient(left, #8DD62E, #9EEF14));	
     }
 
