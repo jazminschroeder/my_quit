@@ -23,7 +23,7 @@ class QuitProfilesController < ApplicationController
     respond_to do |format|
       if @quit_profile.save
         current_user.quit_profile = @quit_profile
-        format.html { redirect_to(@quit_profile, :notice => 'Quit profile was successfully created.') }
+        format.html { redirect_to("/#{current_user.username}", :notice => 'Quit profile was successfully created.') }
       else
         format.html { render :action => "new" }
       end

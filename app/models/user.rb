@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   validates_presence_of :username
   validates_format_of :username, :with => /^[A-Za-z\d_]+$/, :allow_nil => true
   has_one :quit_profile
+
+  def has_quit_profile?
+    quit_profile.present?
+  end
 end
