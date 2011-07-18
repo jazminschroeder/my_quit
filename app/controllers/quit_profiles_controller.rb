@@ -3,7 +3,7 @@ class QuitProfilesController < ApplicationController
   
   def show
     @user = User.find_by_username(params[:username])    
-    @quit_profile = @user.quit_profile
+    @quit_profile = @user.quit_profile unless @user.nil?
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @quit_profile }

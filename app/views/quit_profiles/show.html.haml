@@ -1,20 +1,22 @@
-%h1 #{@user.username} quit smoking on #{@quit_profile.quit_date.to_date}!
+-if @user and @quit_profile
+  %h1 #{@user.username} quit smoking on #{@quit_profile.quit_date.to_date}!
 
-%p
-  %b 
-    = "#{distance_of_time_in_words(@quit_profile.quit_date.to_time, Time.now, false)} smoke free!!"
-%p
-  %b
-    In other words... 
+  %p
+    %b 
+      = "#{distance_of_time_in_words(@quit_profile.quit_date.to_time, Time.now, false)} smoke free!!"
+  %p
+    %b
+      In other words... 
 
-%ul
-  %li
-    = "#{number_to_currency(@quit_profile.money_saved)} USD saved" 
-  %li
-    = "#{distance_of_time_in_words(@quit_profile.current_time_plus_life_saved, Time.now, false)} of life saved" 
-  %li
-    = "#{@quit_profile.cigarettes_not_smoked} cigarettes not smoked"
-
+  %ul
+    %li
+      = "#{number_to_currency(@quit_profile.money_saved)} USD saved" 
+    %li
+      = "#{distance_of_time_in_words(@quit_profile.current_time_plus_life_saved, Time.now, false)} of life saved" 
+    %li
+      = "#{@quit_profile.cigarettes_not_smoked} cigarettes not smoked"
+-else
+  %p Quitter not found...
 
 
 
